@@ -4,7 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>QR Scanner</title>
-  <script src="./node_modules/html5-qrcode/html5-qrcode.min.js"></script>
+  
+  <!-- Remove any local references like:
+       <script src="./node_modules/html5-qrcode/html5-qrcode.min.js"></script> -->
+       
+  <!-- Add the html5-qrcode library from a CDN, loaded BEFORE your own script -->
+  <script src="https://cdn.jsdelivr.net/npm/html5-qrcode"></script>
+  
   <style>
     main {
       display: flex;
@@ -87,6 +93,7 @@
     </div>
   </main>
   
+  <!-- Your custom script code goes AFTER the CDN script -->
   <script>
     let scanner; // Global variable for the scanner
 
